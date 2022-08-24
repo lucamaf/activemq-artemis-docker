@@ -136,7 +136,7 @@ ARG ACTIVEMQ_ARTEMIS_VERSION
 ENV ACTIVEMQ_ARTEMIS_VERSION=$ACTIVEMQ_ARTEMIS_VERSION
 
 # add user and group for artemis
-RUN groupadd -g 900 -r artemis && useradd -r -u 900 -g artemis artemis
+RUN groupadd -f -g 900 -r artemis && useradd -f -r -u 900 -g artemis artemis
 
 RUN apt-get -qq -o=Dpkg::Use-Pty=0 update && \
   apt-get -qq -o=Dpkg::Use-Pty=0 install -y --no-install-recommends \
