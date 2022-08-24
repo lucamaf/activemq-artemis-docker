@@ -32,9 +32,9 @@ jobs:
         with:
           context: ./src/
           build-args: |
-            ACTIVEMQ_ARTEMIS_VERSION=2.24.0
+            ACTIVEMQ_ARTEMIS_VERSION=2.19.1
             BASE_IMAGE=vromero/activemq-artemis
-            ACTIVEMQ_ARTEMIS_VERSION=2.24.0
+            ACTIVEMQ_ARTEMIS_VERSION=2.19.1
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
